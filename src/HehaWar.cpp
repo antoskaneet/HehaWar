@@ -1,21 +1,11 @@
-#include <SFML/Graphics.hpp>
+#include "window/Window.hpp"
 
 int main()
 {
-    auto window = sf::RenderWindow(sf::VideoMode({1920u, 1080u}), "HehaWar");
-    window.setFramerateLimit(144);
+    Window gameWindow;
 
-    while (window.isOpen())
-    {
-        while (const std::optional event = window.pollEvent())
-        {
-            if (event->is<sf::Event::Closed>())
-            {
-                window.close();
-            }
-        }
+    gameWindow.run();
+    
+    return 0;
 
-        window.clear();
-        window.display();
-    }
-}
+};
