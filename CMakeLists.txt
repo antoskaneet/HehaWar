@@ -16,7 +16,7 @@ FetchContent_MakeAvailable(SFML)
 # Указание исходных файлов
 add_executable(HehaWar 
     src/HehaWar.cpp
-    src/window/Window.cpp
+    src/engine/Mainloop.cpp
 )
 
 
@@ -24,5 +24,5 @@ target_link_libraries(HehaWar PRIVATE SFML::Graphics)
 
 
 target_include_directories(HehaWar PRIVATE 
-    src/window
+    src/engine
 )

@@ -1,11 +1,12 @@
-#include "window/Window.hpp"
+#include <iostream>
+
+#include "../engine/Mainloop.hpp"
+
 
 int main()
 {
-    Window gameWindow;
+    Mainloop::run();
 
-    gameWindow.run();
-    
     return 0;
-
 };
+
