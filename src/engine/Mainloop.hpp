@@ -1,12 +1,11 @@
 #pragma once
-
-
+#include "../window/WindowSetting.hpp"
 
 class Mainloop {
+private:
+    sf::RenderWindow& window;
+    WindowEvent& windowEvent;
 public:
-    static void run();
-
-
-
-    
+    Mainloop(sf::RenderWindow& window, WindowEvent& windowEvent);
+    void run();
 };

@@ -17,6 +17,8 @@ FetchContent_MakeAvailable(SFML)
 add_executable(HehaWar 
     src/HehaWar.cpp
     src/engine/Mainloop.cpp
+    src/window/WindowEvent.cpp
+    src/window/WindowSetting.cpp
 )
 
 
@@ -25,4 +27,5 @@ target_link_libraries(HehaWar PRIVATE SFML::Graphics)
 
 target_include_directories(HehaWar PRIVATE 
     src/engine
+    src/window
 )
