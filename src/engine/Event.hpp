@@ -1,9 +1,10 @@
 #pragma once
+
+#include "../window/WindowManager.hpp"
 #include <SFML/Graphics.hpp>
 #include "../window/WindowEvent.hpp"
 
-class Mainloop {
-
+class Event {
 public:
-    static void run();
+    void pollEvent();
 };

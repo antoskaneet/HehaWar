@@ -17,8 +17,9 @@ FetchContent_MakeAvailable(SFML)
 add_executable(HehaWar 
     src/HehaWar.cpp
     src/engine/Mainloop.cpp
+    src/engine/Event.cpp
     src/window/WindowEvent.cpp
-    src/window/WindowSetting.cpp
+    src/window/WindowManager.cpp
 )
 
 

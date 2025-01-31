@@ -1,17 +1,21 @@
-#include "../engine/Mainloop.hpp"
 #include <SFML/Graphics.hpp>
-#include "../window/WindowSetting.hpp"
-#include "../window/WindowEvent.hpp"
 
-Mainloop::Mainloop(sf::RenderWindow& window, WindowEvent& windowEvent) 
-    : window(window), windowEvent(windowEvent) {}
+#include "../engine/Mainloop.hpp"
+#include "../engine/Event.hpp"
+#include "../window/WindowManager.hpp"
+
 void Mainloop::run() {
-    while (window.isOpen()) {
+    Event Event;
+    sf::RenderWindow* window = WindowManager::getWindow();
 
+    while (window->isOpen()) {
+        Event.pollEvent();
 
         
-        window.clear();
+        window->clear();
         
-        window.display();
+        window->display();
     }
+
+    WindowManager::cleanup();
 }
