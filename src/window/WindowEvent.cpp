@@ -2,10 +2,6 @@
 #include <SFML/Graphics.hpp>
 #include "../window/WindowManager.hpp"
 
-
-
-
-
 void WindowEvent::toggleFullscreen() {
     sf::RenderWindow* window = WindowManager::getWindow();
     if (isFullscreen) {

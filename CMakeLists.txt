@@ -18,8 +18,11 @@ add_executable(HehaWar
     src/HehaWar.cpp
     src/engine/Mainloop.cpp
     src/engine/Event.cpp
+    src/engine/ScreenManager.cpp
     src/window/WindowEvent.cpp
     src/window/WindowManager.cpp
+    src/frontend/screens/MainMenu.cpp
+    src/frontend/screens/ScreenGame.cpp
 )
 
 
@@ -28,5 +31,8 @@ target_link_libraries(HehaWar PRIVATE SFML::Graphics)
 
 target_include_directories(HehaWar PRIVATE 
     src/engine
+    src/frontend
+    src/frontend/screens
+    src/frontend/UI
     src/window
 )

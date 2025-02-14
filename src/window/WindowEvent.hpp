@@ -5,6 +5,5 @@ class WindowEvent {
 private:
     bool isFullscreen = true;
 public:
-    void pollEvent();
     void toggleFullscreen();
 };

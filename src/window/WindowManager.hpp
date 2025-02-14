@@ -5,10 +5,10 @@
 class WindowManager {
 
 private:
+    WindowManager() = default;
     static sf::RenderWindow* window;
-    WindowManager () = default;
 
 public:
-    static sf::RenderWindow* getWindow  ();
-    static void cleanup();
+    static sf::RenderWindow* getWindow();
+    static void cleanup();  
 };
